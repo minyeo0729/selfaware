@@ -93,7 +93,7 @@ const App = () => {
 
 
   }, [getRandomNumber]);
-  
+
   const changeColor = useCallback(() => {
     setCurrentIndex((prevIndex) => {
       const newIndex = (prevIndex + 1) % letters.length;
@@ -183,6 +183,3 @@ const App = () => {
 export default App;
 
 
-//circle안에 svg넣어서 써보기 아니 써클 자체가 안보이다가 나타나는거면? 
-//circle이 퍼질때 그 배경색이 뒤에 있어야지 자꾸 핑크배경이 나오면 안됨 
-//글자 흔들기 

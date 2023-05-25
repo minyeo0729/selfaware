@@ -1,13 +1,13 @@
 @font-face { font-family: clearface; src: url('assets/Clearface.ttf') format('truetype'); } 
 @font-face { font-family: adieu; src: url('assets/Adieu-Light.ttf') format('truetype'); } 
 html { font-size: 6.25%; } 
-body { font-family: adieu, sans-serif; } 
+body { font-family: adieu, sans-serif;  margin: 0; padding:0; box-sizing: border-box; overflow: hidden;} 
 :root { --pink: #F7D9D3; --blue: #5267AB; --yellow: #f3be22; --red: #ee4e2b; --green: #019563; --bg:''; } 
-
-.wrapper { background: var(--pink); margin: 30rem; height: 800rem; border-radius: 20rem; overflow: hidden; position: relative; padding: 30rem; } 
-.clone { --color:''; width: 130rem; height: 130rem; border-radius: 50%; /* background: red; */ position: absolute; transition: all .5s; font-size: 130rem; cursor: pointer; text-align: center; color: var(--red); z-index: 1; } 
+#root{padding: 30rem;width: 100%; height: 100%;}
+.wrapper { background: var(--pink); height: 800rem; border-radius: 20rem; overflow: hidden; position: relative; padding: 30rem; width: 1200rem; margin: 0 auto; } 
+.clone { --color:''; width: 130rem; height: 130rem; border-radius: 50%; /* background: red; */ position: absolute; transition: all .5s; font-size: 130rem; cursor: pointer; text-align: center; color: var(--red); z-index: 1;will-change: transform; } 
 /* .circle { position: absolute; left:0; top: 0; width: 100%; height: 100%; clip-path: circle(100rem); background-color: var(--bg); } */
-.circle { position: absolute; border-radius: 100%; background-color: var(--bg); }
+.circle { position: absolute; border-radius: 100%; background-color: var(--bg); will-change: transform;}
 .circle.spread { 
   width: 100%;
   height: 100%;
@@ -25,7 +25,7 @@ body { font-family: adieu, sans-serif; }
       transform: translate(0, 0);
     }
     100% {
-      transform: translate(15px, 15px) rotate(30deg);
+      transform: translate(15rem, 15rem) rotate(30deg);
     }
   }
   
