@@ -1,11 +1,31 @@
+@font-face { font-family: clearface; src: url('assets/Clearface.ttf') format('truetype'); } 
+@font-face { font-family: adieu; src: url('assets/Adieu-Light.ttf') format('truetype'); } 
+html { font-size: 6.25%; } 
+body { font-family: adieu, sans-serif; } 
+:root { --pink: #F7D9D3; --blue: #5267AB; --yellow: #f3be22; --red: #ee4e2b; --green: #019563; --bg:''; } 
 
-/* add font-face */
-.wrapper { background: #5267AB; margin: 30px; height: 300px; border-radius: 20px; overflow: hidden; position: relative;} 
-.clone { width: 80px; height: 80px; border-radius: 50%; /* background: red; */ position: absolute; transition: all .5s; font-size: 60px; cursor: pointer; text-align: center; } 
-/* span { font-size: 60rem; width: 100%; height: 100%; position: absolute; left: 0; top: 0; display: block; text-align: center; color: #F7D9D3; z-index: 21; cursor: pointer; } 
-span:before { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%;  transition: all 1.5s; border-radius: 50%; transform-origin: center center; z-index: 20; background: transparent; } 
-i { position: relative; z-index: 999; font-style: normal; } 
-.clone:hover span:before {/*  transform: scale(30); z-index: 999;   */
+.wrapper { background: var(--pink); margin: 30rem; height: 800rem; border-radius: 20rem; overflow: hidden; position: relative; padding: 30rem; } 
+.clone { --color:''; width: 130rem; height: 130rem; border-radius: 50%; /* background: red; */ position: absolute; transition: all .5s; font-size: 130rem; cursor: pointer; text-align: center; color: var(--red); z-index: 1; } 
+/* .circle { position: absolute; left:0; top: 0; width: 100%; height: 100%; clip-path: circle(100rem); background-color: var(--bg); } */
+.circle { position: absolute; border-radius: 100%; background-color: var(--bg); }
+.circle.spread { 
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  border-radius: 0%; }
 
-
-/* .overlay{position: absolute; background: salmon; width: 100%; height: 100%;} */
+  .shake {
+    animation: shake 0.2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(15px, 15px) rotate(30deg);
+    }
+  }
+  
